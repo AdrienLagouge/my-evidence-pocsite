@@ -1,0 +1,5 @@
+# This file was automatically generated
+name: mockdb
+type: duckdb
+options:
+  filename: mockdb.duckdb

@@ -1,0 +1,30 @@
+/venv
+/.meltano
+.env
+/transform/dbt_packages
+/transform/.tmp
+/docs/run
+/docs/compiled
+/docs/graph_summary.json
+/docs/graph.gpickle
+/docs/partial_parse.msgpack
+/docs/run_results.json
+/docs/semantic_manifest.json
+/data/data_catalog
+/output
+/logs
+
+#All duckdb databases
+*.duckdb
+*.db
+
+#Evidence modules
+/evidence/.evidence/template
+/evidence/.svelte-kit
+/evidence/build
+/evidence/node_modules
+.DS_Store
+/evidence/static/data
+/evidence/*.options.yaml
+/evidence/.vscode/settings.json
+

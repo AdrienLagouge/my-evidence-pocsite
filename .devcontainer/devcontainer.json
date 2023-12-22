@@ -1,0 +1,61 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/docker-existing-dockerfile
+{
+	"name": "pocsite",
+
+	// Sets the run context to one level up instead of the .devcontainer folder.
+	"context": "..",
+	"build": {
+        "args": {
+            "VARIANT": "3.11"
+        }
+    },
+
+	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+	"dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+          "extensions": [
+            "evidence.evidence-vscode",
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "redhat.vscode-yaml",
+            "ms-vscode.makefile-tools",
+            "EditorConfig.EditorConfig",
+            "samuelcolvin.jinjahtml",
+            "github.vscode-pull-request-github",
+            "eamodio.gitlens",
+            "visualstudioexptteam.vscodeintellicode",
+            "bastienboutonnet.vscode-dbt",
+            "vivaxy.vscode-conventional-commits",
+            "mechatroner.rainbow-csv"
+        ],
+        "settings": {
+            "python.pythonPath": "/usr/local/bin/python",
+            "python.languageServer": "Pylance",
+            "files.associations": {
+                "*.sql": "jinja-sql"
+            }
+            // any other settings go here
+        }
+        }
+      },
+    "features": {
+        //see https://github.com/devcontainers/features/tree/main/src/docker-in-docker for details on below
+        "ghcr.io/devcontainers/features/docker-in-docker:1":{},
+        //see https://docs.github.com/en/codespaces/developing-in-codespaces/using-github-codespaces-with-github-cli#ssh-into-a-codespace for details
+        // this is to enable tools eg harlequin to run properly
+        "ghcr.io/devcontainers/features/sshd:1": {
+            "version": "latest"
+        }
+    }
+    //,
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created - for example installing curl.
+	//"postCreateCommand": "make build"
+
+	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+}
