@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+	import { Icon } from '@steeze-ui/svelte-icon';
+	import { ChevronRight } from '@steeze-ui/tabler-icons';
 
 	export let fileTree;
 
@@ -58,7 +60,7 @@
 	<div class="inline-flex items-center text-sm capitalize gap-1 text-gray-500 mb-2 sm:mb-4">
 		{#each crumbs as crumb, i}
 			{#if i > 0}
-				<i class="fa-solid fa-chevron-right"></i>
+				<Icon src={ChevronRight} size="12px" theme="solid" />
 				{#if crumb.href}
 					<a href={crumb.href} class="hover:underline">{crumb.title}</a>
 				{:else}
