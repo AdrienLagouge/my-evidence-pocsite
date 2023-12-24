@@ -30,4 +30,5 @@ docker-run-evidence:
 		--env MDS_LATEST_RATINGS=true \
 		--env MDS_ENABLE_EXPORT=true \
 		--env ENVIRONMENT=docker \
-		pocsite make run serve
+		pocsite
+		make run serve

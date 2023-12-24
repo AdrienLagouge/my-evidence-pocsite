@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: conso_nrj_opengrdf
+    meta:
+      external_location: "{{ env_var('MELTANO_PROJECT_ROOT') }}/data/data_catalog/bronze/conso_nrj_opengrdf-*.parquet"
+    tables: 
+      - name: conso_nrj_bdd
+        description: Consommation annuelle d’électricité et gaz par commune et par secteur d’activité issue de Open Data GRD

@@ -1,0 +1,1 @@
+FROM conso_gaz_departement
