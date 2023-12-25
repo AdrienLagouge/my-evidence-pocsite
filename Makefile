@@ -3,15 +3,16 @@ build:
 	pipx ensurepath
 	pipx install meltano==3.1.0
 	meltano install
-	meltano invoke dbt-duckdb deps
-	mkdir -p data/data_catalog/raw
-	mkdir -p data/data_catalog/prep
-	mkdir -p data/data_catalog/site
+	mkdir -p data/data_catalog/bronze
+	mkdir -p data/data_catalog/silver
 
 run:
+	meltano invoke dbt-duckdb deps
 	meltano invoke dbt-duckdb build
 
 serve:
+	cd evidence ; npm run sources
+	cd .. 
 	meltano invoke evidence dev
 
 evidence-build:

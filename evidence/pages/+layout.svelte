@@ -81,7 +81,6 @@
 	import Header from "$lib/HeaderDGCS.svelte";
 	import ContentsList from "$lib/FrenchContentsList.svelte";
 	import TableOfContents from "$lib/FrenchTableOfContents.svelte";
-	
 
 	const prefetchStrategy = dev ? 'tap' : 'hover';
 

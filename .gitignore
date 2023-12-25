@@ -17,6 +17,7 @@
 #All duckdb databases
 *.duckdb
 *.db
+*.wal
 
 #Evidence modules
 /evidence/.evidence/template

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@evidence-dev/labs": "^0.0.3"
+  }
+}
