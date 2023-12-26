@@ -7,3 +7,9 @@ sources:
     tables: 
       - name: conso_nrj_bdd
         description: Consommation annuelle d’électricité et gaz par commune et par secteur d’activité issue de Open Data GRD
+  - name: prod_elec_enedis
+    meta:
+      external_location: "{{ env_var('MELTANO_PROJECT_ROOT') }}/data/data_catalog/bronze/prodelec_*.parquet"
+    tables: 
+      - name: prodelec
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis

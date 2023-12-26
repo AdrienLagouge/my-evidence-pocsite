@@ -1,16 +1,13 @@
-build:
-	pip install -r requirements.txt
-	pipx ensurepath
-	pipx install meltano==3.1.0
+pipeline-build:
 	meltano install
-	mkdir -p data/data_catalog/bronze
-	mkdir -p data/data_catalog/silver
 
-run:
+pipeline-run:
+	meltano run tap-spreadsheets-anywhere target-parquet
+	meltano run tap-rest-api-msdk target-parquet
 	meltano invoke dbt-duckdb deps
 	meltano invoke dbt-duckdb build
 
-serve:
+evidence-serve:
 	cd evidence ; npm run sources
 	cd .. 
 	meltano invoke evidence dev

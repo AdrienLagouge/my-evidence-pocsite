@@ -28,10 +28,81 @@ plugins:
         prefer_schema_as_string: true
         key_properties: [code_commune, annee]
         format: csv
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk
+    config:
+      records_path: $.results[*]
+      streams:
+      - name: prodelec_0
+        path: '&offset=0'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_1
+        path: '&offset=100'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_2
+        path: '&offset=200'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_3
+        path: '&offset=300'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_4
+        path: '&offset=400'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_5
+        path: '&offset=500'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_6
+        path: '&offset=600'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_7
+        path: '&offset=700'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_8
+        path: '&offset=800'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_9
+        path: '&offset=900'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_10
+        path: '&offset=1000'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_11
+        path: '&offset=1100'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_12
+        path: '&offset=1200'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_13
+        path: '&offset=1300'
+        flattening_enabled: true
+        flattening_max_depth: 1
+      - name: prodelec_14
+        path: '&offset=1400'
+        flattening_enabled: true
+        flattening_max_depth: 1
   loaders:
   - name: target-parquet
     variant: estrategiahq
     pip_url: git+https://github.com/estrategiahq/target-parquet.git
+    config:
+      destination_path: /data/data_catalog/bronze
+      compression_method: snappy
+      logging_level: info
+      disable_collection: true
   utilities:
   - name: dbt-duckdb
     variant: jwills
