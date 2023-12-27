@@ -9,10 +9,18 @@ SELECT
 	annee::INT AS annee,
 	code_departement::VARCHAR AS departement,
 	nom_departement::VARCHAR as nom,
-    nb_sites_photovoltaique_enedis::INT AS nb_sites_photo,
-    nb_sites_eolien_enedis::INT AS nb_sites_eolien,
-    energie_produite_annuelle_eolien_enedis_mwh::DOUBLE AS nrj_eolien,
-    energie_produite_annuelle_photovoltaique_enedis_mwh::DOUBLE as nrj_photo
+    CASE 
+        WHEN nb_sites_photovoltaique_enedis::INT < 0 OR  nb_sites_photovoltaique_enedis::INT  IS NULL THEN 0
+        ELSE nb_sites_photovoltaique_enedis::INT 
+    END
+    AS nb_sites_photo,
+    CASE 
+        WHEN nb_sites_eolien_enedis::INT < 0 OR  nb_sites_eolien_enedis::INT  IS NULL THEN 0
+        ELSE nb_sites_eolien_enedis::INT 
+    END
+    AS nb_sites_eolien,
+    energie_produite_annuelle_eolien_enedis_mwh::DECIMAL(10,2) AS nrj_eolien,
+    energie_produite_annuelle_photovoltaique_enedis_mwh::DECIMAL(10,2) as nrj_photo
 FROM {{ source( 'prod_elec_enedis', 'prodelec' ) }}
 
 

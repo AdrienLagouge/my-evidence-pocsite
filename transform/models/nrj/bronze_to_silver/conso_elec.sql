@@ -21,3 +21,7 @@ SELECT
 FROM {{ source( 'conso_nrj_opengrdf', 'conso_nrj_bdd' ) }}
 WHERE filiere = 'Electricité'
 
+
+
+
+
