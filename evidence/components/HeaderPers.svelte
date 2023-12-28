@@ -5,7 +5,7 @@
 	import { dev } from '$app/environment';
     import { Icon } from '@steeze-ui/svelte-icon';
 	import { Settings, _3dCubeSphere, Link, X, Menu2, Dots, Table } from '@steeze-ui/tabler-icons';
-	import Logo from '$lib/LogoDGCS.svelte';
+	import Logo from '$lib/LogoPers.svelte';
 
 	const beforeprint = new Event('export-beforeprint');
 	const afterprint = new Event('export-afterprint');
@@ -131,7 +131,7 @@
 	} 
 
 	.empty-box{
-	width:350px;
+	width:250px;
 	float:left;
 	}
 </style>

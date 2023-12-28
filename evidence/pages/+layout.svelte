@@ -78,7 +78,7 @@
 	
 	import Sidebar from "$lib/FrenchSidebar.svelte";
 	import BreadCrumbs from "$lib/FrenchBreadCrumbs.svelte";
-	import Header from "$lib/HeaderDGCS.svelte";
+	import Header from "$lib/HeaderPers.svelte";
 	import ContentsList from "$lib/FrenchContentsList.svelte";
 	import TableOfContents from "$lib/FrenchTableOfContents.svelte";
 
