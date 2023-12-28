@@ -20,7 +20,7 @@
 *.wal
 
 #Heavy CSV files to be loaded by the user in the /data folder
-data/*.csv
+*.csv
 
 #Evidence modules
 /evidence/.evidence/template
