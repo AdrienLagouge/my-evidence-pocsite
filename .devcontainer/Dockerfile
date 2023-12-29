@@ -29,4 +29,4 @@ COPY Makefile .
 COPY evidence ./evidence
 COPY requirements.txt .
 
-RUN make pipeline-build
+

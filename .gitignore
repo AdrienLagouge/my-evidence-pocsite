@@ -29,9 +29,7 @@
 /evidence/*.options.yaml
 /evidence/.vscode/settings.json
 
-poetry.lock
-pyproject.toml
-*.py
+
 
 
 
