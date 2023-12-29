@@ -23,7 +23,7 @@ plugins:
       tables:
       - path: file://./data
         name: conso_nrj_opengrdf
-        pattern: conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune.csv
+        pattern: conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune-file[0-9]+.csv
         start_date: '2001-01-01T00:00:00Z'
         prefer_schema_as_string: true
         key_properties: [code_commune, annee]

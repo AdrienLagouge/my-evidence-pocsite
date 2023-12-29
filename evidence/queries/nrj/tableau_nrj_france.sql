@@ -1,7 +1,6 @@
 SELECT 
     consotwh as 'Consommation (en TWh)',
-    nom as 'Département',
-    departement as 'N°',
+    departement || ' - ' || nom as "Département",
     dpt_link
 FROM ${classement_nrj_france}
 

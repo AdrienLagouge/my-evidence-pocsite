@@ -19,9 +19,6 @@
 *.db
 *.wal
 
-#Heavy CSV files to be loaded by the user in the /data folder
-*.csv
-
 #Evidence modules
 /evidence/.evidence/template
 /evidence/.svelte-kit

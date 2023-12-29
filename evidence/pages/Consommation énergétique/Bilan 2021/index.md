@@ -5,20 +5,22 @@ queries:
   - carte_nrj_France: nrj/carte_nrj_france.sql
 ---
 
-# Classement des départements français les plus consommateurs d'énergie en 2021
+# Classement des départements métropolitains les plus consommateurs d'énergie en 2021
 
-Le fichier source correspondant aux données présentées ci-dessous est à retrouver sur le site de [Open Data GRD](https://opendata.agenceore.fr/explore/dataset/conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune/information/)
+Le fichier plat (.csv) correspondant aux données sources présentées ci-dessous est à retrouver sur le site de [Open Data GRD](https://opendata.agenceore.fr/explore/dataset/conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune/information/)
 
-Consommation énergétique (gaz et électricité) des départements français
+<Alert status="info">
+Cliquez sur le nom d'un département dans le tableau ou sur la carte pour retrouver ses résultats détaillés !
+</Alert>
 
-<DataTable data={tableau_nrj_france} link=dpt_link rows=7 rowShading="true">
-  <Column id='N°'/>
+## Consommation totale (gaz et électricité) 
+
+<DataTable data={tableau_nrj_france} link=dpt_link rows=10 rowShading="true">
   <Column id='Département'/> 
   <Column id='Consommation (en TWh)'contentType=colorscale scaleColor=blue//>
 </DataTable>
 
 <FranceMapModified
-    title = 'Représentation cartographique'
     data={carte_nrj_france} 
     region= nom
     value= 'Consommation (en TWh)'

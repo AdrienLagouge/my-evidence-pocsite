@@ -6,7 +6,7 @@
 }}
 
 SELECT  
-	annee::INT AS annee,
+	strptime(annee, '%Y') AS annee,
 	code_departement::VARCHAR AS departement,
 	nom_departement::VARCHAR as nom,
     CASE 
@@ -22,6 +22,7 @@ SELECT
     cast(energie_produite_annuelle_eolien_enedis_mwh AS DECIMAL(15,3)) AS nrj_eolien,
     cast(energie_produite_annuelle_photovoltaique_enedis_mwh AS DECIMAL(15,3)) as nrj_photo
 FROM {{ source( 'prod_elec_enedis', 'prodelec' ) }}
+
 
 
 

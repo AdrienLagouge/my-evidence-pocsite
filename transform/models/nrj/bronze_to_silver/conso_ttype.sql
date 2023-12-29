@@ -7,7 +7,7 @@
 
 SELECT  
 	opérateur,
-	année::INT AS annee,
+	strptime(année, '%Y') AS annee,
 	filière as filiere,
 	consommation_agriculture_mwh::DOUBLE AS conso_agri,
 	consommation_industrie_mwh ::DOUBLE AS conso_indus,
