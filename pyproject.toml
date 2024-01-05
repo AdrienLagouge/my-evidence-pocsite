@@ -12,6 +12,7 @@ meltano = "^3.1.0"
 pandas = "^2.1.4"
 pyarrow = "^14.0.2"
 requests = "^2.31.0"
+meltano-map-transform = {git = "https://github.com/MeltanoLabs/meltano-map-transform.git"}
 
 
 [build-system]

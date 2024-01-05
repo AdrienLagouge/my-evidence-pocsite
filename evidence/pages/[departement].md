@@ -4,7 +4,7 @@ queries:
   - analysis_conso_secteur: nrj/analysis_conso_secteur.sql
 ---
 
-# {params.departement} : Résultats détaillés 
+# {params.departement.toUpperCase()} : Résultats détaillés 
 
 ## Consommation énergétique 
 

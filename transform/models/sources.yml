@@ -1,15 +1,41 @@
 version: 2
 
 sources:
-  - name: conso_nrj_opengrdf
-    meta:
-      external_location: "{{ env_var('MELTANO_PROJECT_ROOT') }}/data/data_catalog/bronze/conso_nrj_opengrdf-*.parquet"
+  - name: tap_spreadsheets_anywhere
     tables: 
-      - name: conso_nrj_bdd
+      - name: bronze_conso_nrj_opengrdf
         description: Consommation annuelle d’électricité et gaz par commune et par secteur d’activité issue de Open Data GRD
-  - name: prod_elec_enedis
-    meta:
-      external_location: "read_parquet('{{ env_var('MELTANO_PROJECT_ROOT') }}/data/data_catalog/bronze/prodelec_*.parquet',union_by_name=true)"
-    tables: 
-      - name: prodelec
+  - name: prodelec
+    tables:
+      - name: bronze_prodelec_0
         description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_1
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_2
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_3
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_4
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_5
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_6
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_7
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_8
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_9
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_10
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_11
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_12
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_13
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+      - name: bronze_prodelec_14
+        description: Production électrique annuelle par filière à la maille EPCI provenant de l'Open Data Enedis
+
+        

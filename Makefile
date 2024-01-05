@@ -13,8 +13,9 @@ pipeline-run:
 	mkdir -p data/data_catalog/silver
 	meltano run tap-spreadsheets-anywhere target-duckdb \
 	--full-refresh
-	meltano run tap-rest-api-msdk target-parquet
+	meltano run tap-rest-api-msdk target-duckdb--api
 	meltano invoke dbt-duckdb deps
+	meltano invoke dbt-duckdb build
 
 evidence-serve:
 	cd evidence ; npm run sources

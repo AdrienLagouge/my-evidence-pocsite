@@ -1,6 +1,6 @@
 WITH transform_elec AS (
     SELECT 
-        annee,
+        annee::INT AS annee,
         nom,
         100 * conso_agri/conso_totale as 'Agriculture',
         100 * conso_indus/conso_totale as 'Industrie',
@@ -11,7 +11,7 @@ WITH transform_elec AS (
     FROM src_conso_elec_departement
 ), transform_gaz AS (
     SELECT 
-        annee,
+        annee::INT AS annee,
         nom,
         100 * conso_agri/conso_totale as 'Agriculture',
         100 * conso_indus/conso_totale as 'Industrie',
