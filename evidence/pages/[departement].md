@@ -30,6 +30,8 @@ title="Evolution de la consommation par type d'énergie"
 subtitle = "En TWh"
 xAxisTitle= "Année"
 xGridlines = true
+xFmt="####"
+yFmt="#,##0.0"
 />
 
 ### Par grand type de secteur utilisateur
@@ -68,6 +70,8 @@ xGridlines = true
     yAxisTitle= false
     yMin = 0
     yMax = 100
+    xFmt="####"
+    yFmt="num0"
 />
 
 <BarChart
@@ -81,6 +85,8 @@ xGridlines = true
     yAxisTitle= false
     yMin = 0
     yMax = 100
+    xFmt="####"
+    yFmt="num0"
 />
 
 ## Production électrique renouvelable
@@ -100,6 +106,6 @@ from src_prod_elec_departement
 where nom like '${params.departement}'
 ```
 Comparaison de l'intensité énergétique des sites de production repertoriés dans ce département (nombre moyen de MWh produits en 2022)
-- <div> Pour l'éolien  <div class = "font-bold"> <Value data={filtered_details_prod_renouv} column=intensité_eolien/> MWh </div> </div> 
-- <div> Pour le photovoltaique  <div class = "font-bold"> <Value data={filtered_details_prod_renouv} column=intensité_photovoltaique/> MWh </div> </div> 
+- <div> Pour l'éolien  <div class = "font-bold"> <Value data={filtered_details_prod_renouv} column=intensité_eolien fmt='num1'/> MWh </div> </div> 
+- <div> Pour le photovoltaique  <div class = "font-bold"> <Value data={filtered_details_prod_renouv} column=intensité_photovoltaique fmt='num1'/> MWh </div> </div> 
 
