@@ -21,7 +21,7 @@ SELECT
     AS nb_sites_eolien,
     cast(energie_produite_annuelle_eolien_enedis_mwh AS DECIMAL(15,3)) AS nrj_eolien,
     cast(energie_produite_annuelle_photovoltaique_enedis_mwh AS DECIMAL(15,3)) as nrj_photo
-FROM {{ source( 'prod_elec_enedis', 'prodelec' ) }}
+FROM {{ ref( 'union_bronze_prod_elec') }}
 
 
 

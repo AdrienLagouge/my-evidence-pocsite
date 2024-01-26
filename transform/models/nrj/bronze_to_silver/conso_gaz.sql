@@ -18,6 +18,6 @@ SELECT
 	code_département AS departement,
 	libellé_département as nom,
 	consommation_totale_mwh ::DOUBLE AS conso_totale
-FROM {{ source( 'conso_nrj_opengrdf', 'conso_nrj_bdd' ) }}
+FROM {{ source( 'tap_spreadsheets_anywhere', 'bronze_conso_nrj_opengrdf' ) }}
 WHERE filiere = 'Gaz'
 
