@@ -41,7 +41,7 @@
       </a>
 
       <a href="/" class="font-bold items-center">
-        Tableau de bord de la Mission XXX
+        Tableau de bord de la Mission Analyse des Données
       </a>
     </div>
 
