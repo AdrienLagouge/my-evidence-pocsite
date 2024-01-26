@@ -23,6 +23,7 @@ plugins:
     variant: widen
     pip_url: tap-rest-api-msdk
     config:
+      api_url: https://data.enedis.fr//api/explore/v2.1/catalog/datasets/production-electrique-par-filiere-a-la-maille-epci/records?select=annee%2Cnom_departement%2Ccode_departement%2Cnb_sites_photovoltaique_enedis%2Cnb_sites_eolien_enedis%2Cenergie_produite_annuelle_photovoltaique_enedis_mwh%2Cenergie_produite_annuelle_eolien_enedis_mwh&where=year(annee)%20%3D2022%20AND%20nb_sites_eolien_enedis%20is%20not%20null%20AND%20nb_sites_photovoltaique_enedis%20is%20not%20null&limit=100
       records_path: $.results[*]
       streams:
       - name: bronze_prodelec_0
